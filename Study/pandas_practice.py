@@ -9,11 +9,12 @@ import pandas as pd
 # Create a DataFrame
 mydataset = {
     'cars': ["BMW", "Volvo", "Ford"],
-    'passings': [3, 7, 2]
+    'passings': [3, 7, None]
 }
 
 mycars = pd.DataFrame(mydataset)
-print(mycars)
+cars_df = mycars.fillna(0)
+print(cars_df)
 
 # checking pandas version
 print(f"The current version of pandas installed on this computer is: {pd.__version__}")
